@@ -1,0 +1,347 @@
+@import 'var';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: $body;
+}
+
+.container{
+    background: $white;
+    max-width: 1120px;
+    box-shadow: $shadow;
+    border-radius: 1px;
+    margin: 0 auto;
+    margin-top: 75px;
+    display: flex;
+}
+
+.image{
+    position: relative;
+    padding: 40px 38px 0 20px;
+    width: 50%;
+    height: 500px;
+    background: url(../img/Ellipse6.png) left 20px bottom 33px no-repeat, url(../img/Ellipse7.png) left 235px center no-repeat, $gradient center center;
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        margin-left: 20px;
+        color: $white;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 149px;
+    }
+
+    &__img{
+        max-width: 100%;
+        margin-left: 37px;
+    }
+
+    &__text{
+        position: absolute;
+        color: $white;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        bottom: 35px;
+        left: 40px;
+    }
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+
+    &__title{
+        background: $gray-bg;
+        border-radius:  0 30px 0 0;
+        padding: 29px 128px 29px 129px;
+        margin: 0 auto;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 130%;
+        color: $text;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__form{
+        margin: 0 auto;
+        padding-top: 52px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+label{
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $text;
+    margin-bottom: 10px;
+}
+
+span{
+    color: $green;
+}
+
+.input{
+    background: $gray-bg;
+    border: $input-border;
+    border-radius: 5px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+.phone__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.phone__info .input{
+    width: 72%;
+    margin-right: 20px;
+}
+
+
+.select{
+    width: 34%;
+    position: relative;
+    background: $gray-bg;
+
+    &__header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 50px;
+        padding: 12px 16px;
+        border-radius: 5px;
+        border: $input-border;
+    }
+
+    &__closed{
+        display: none;
+        position: absolute;
+    }
+    &__current{
+        color: $text;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        margin-right: 10px;
+    }
+
+    &__body{
+        display: none;
+        opacity: 0;
+        position: absolute;
+        top: 93%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        background: $gray-bg;
+        border: $input-border;
+        border-top: 0;
+        border-radius: 0 0 5px 5px;
+        margin: 0;
+    }
+
+    &__item{
+        text-align: left;
+        cursor: pointer;
+        border: none;
+        padding: 3px 16px;
+
+        &.select__current{
+            font-weight: 400;
+            font-size: 10px;
+            margin: 0;
+        }
+
+        &:hover{
+            background: rgb(101, 101, 101);
+        }
+    }
+}
+
+.flag{
+    margin-right: 10px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: $green;
+    border: none;
+    border-radius: 5px;
+    margin-top: 18px;
+
+    &__text{
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        margin-right: 10px;
+    }
+}
+
+.secure{
+    display: none;
+}
+
+
+
+
+@media (max-width: 1028px){
+
+    .content__title{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 890px){
+
+    .content__title{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 876px){
+
+    .container{
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 59px;
+    }
+
+    .image{
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        height: 400px;
+        padding: 40px 20px;
+        background: url(../img/reduslim.png) center center no-repeat / 50%, url(../img/Ellipse6.png) center center no-repeat / 50%, #ffffff;
+        
+        &__title{
+            color: $text;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        &__text{
+            color: $text;
+            text-align: right;
+            font-size: 18px;
+            right: 37px;
+            top: 40px;
+        }
+    
+        &__img{
+            display: none;
+        }
+    }
+
+    .content{
+        height: 376px;
+        margin: 0 auto;
+
+        &__title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #fff;
+            border: none;
+            max-width: 280px;
+            padding: 0;
+        }
+        &__form{
+            margin: 0;
+        }
+    }
+
+    .secure{
+        display: block;
+        opacity: 1;
+        background: $gray-bg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 11px 80px;
+
+        &__img{
+            margin: auto 20px;
+        }
+
+        & span{
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 130%;
+            text-align: center;
+            color: $text;
+        }
+    }
+}
+
+@media (max-width: 552px){
+
+    .image{
+        background: url(../img/reduslim.png) center top+120px no-repeat / 55%, url(../img/Ellipse6.png) center top+72px no-repeat / 55%, #ffffff;
+    }
+
+    .content{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .select__header{
+        padding: 16px 10px;
+    }
+}
+
+@media (max-width: 420px){
+
+    .image{
+        height: 350px;
+        background: url(../img/reduslim.png) center top+120px no-repeat / 65%, url(../img/Ellipse6.png) center top+72px no-repeat / 65%, #ffffff;
+    }
+
+    .content__form{
+        width: 90%;
+        margin: 0;
+    }
+    
+    .phone__info{
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px){
+    .image{
+        height: 330px;
+    }
+}
