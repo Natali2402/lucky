@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-    background: $white;
+    background: url(../img/Ellipse7.png) center center no-repeat, #ffffff;
     max-width: 1120px;
     box-shadow: $shadow;
     border-radius: 1px;
@@ -45,6 +45,7 @@ body{
     &__img{
         max-width: 100%;
         margin-left: 37px;
+        max-height: auto;
     }
 
     &__text{
@@ -87,7 +88,6 @@ body{
     }
 }
 
-
 label{
     font-weight: 800;
     font-size: 12px;
@@ -122,7 +122,6 @@ span{
     margin-right: 20px;
 }
 
-
 .select{
     width: 34%;
     position: relative;
@@ -139,10 +138,6 @@ span{
         border: $input-border;
     }
 
-    &__closed{
-        display: none;
-        position: absolute;
-    }
     &__current{
         color: $text;
         font-weight: 600;
@@ -213,6 +208,11 @@ span{
     display: none;
 }
 
+.closed{
+    display: none;
+}
+
+
 
 
 
@@ -225,6 +225,9 @@ span{
 
 @media (max-width: 890px){
 
+    .content{
+        height: 376px;
+    }
     .content__title{
         font-size: 18px;
     }
@@ -244,31 +247,35 @@ span{
         width: 100%;
         height: 400px;
         padding: 40px 20px;
-        background: url(../img/reduslim.png) center center no-repeat / 50%, url(../img/Ellipse6.png) center center no-repeat / 50%, #ffffff;
+        padding-bottom: 0;
+        background: url(../img/reduslim.png) center center no-repeat / 40%, url(../img/Ellipse6.png) center center no-repeat / 40%, #ffffff;
         
         &__title{
-            color: $text;
+            color:#212121;
             margin: 0;
             font-size: 18px;
         }
+        
+        &__img{
+            display: none;
+        }
 
         &__text{
-            color: $text;
+            color: #212121;
             text-align: right;
             font-size: 18px;
             right: 37px;
             top: 40px;
         }
-    
-        &__img{
-            display: none;
-        }
     }
 
     .content{
-        height: 376px;
         margin: 0 auto;
-
+        
+        &__form{
+            margin: 0;
+        }
+        
         &__title{
             display: flex;
             align-items: center;
@@ -279,30 +286,27 @@ span{
             max-width: 280px;
             padding: 0;
         }
-        &__form{
-            margin: 0;
-        }
     }
 
     .secure{
         display: block;
         opacity: 1;
-        background: $gray-bg;
+        background: #F8F8F8;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 11px 80px;
-
-        &__img{
-            margin: auto 20px;
-        }
-
+        
         & span{
             font-weight: bold;
             font-size: 14px;
             line-height: 130%;
             text-align: center;
-            color: $text;
+            color: #212121
+        }
+        
+        &__img{
+            margin: auto 20px;
         }
     }
 }
@@ -310,6 +314,7 @@ span{
 @media (max-width: 552px){
 
     .image{
+        height: 400px;
         background: url(../img/reduslim.png) center top+120px no-repeat / 55%, url(../img/Ellipse6.png) center top+72px no-repeat / 55%, #ffffff;
     }
 
@@ -338,10 +343,21 @@ span{
     .phone__info{
         width: 100%;
     }
+
+    .input{
+        padding: 16px 10px;
+    }
 }
 
 @media (max-width: 350px){
     .image{
         height: 330px;
+    }
+}
+
+@media (max-width: 320px){
+    .image{
+        height: 311px;
+        background: url(../img/reduslim.png) center top+120px no-repeat / 65%, url(../img/Ellipse6.png) center top+72px no-repeat / 65%, #ffffff;
     }
 }

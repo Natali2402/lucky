@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  background: #FFFFFF;
+  background: url(../img/Ellipse7.png) center center no-repeat, #ffffff;
   max-width: 1120px;
   -webkit-box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1);
@@ -54,6 +54,7 @@ body {
 .image__img {
   max-width: 100%;
   margin-left: 37px;
+  max-height: auto;
 }
 
 .image__text {
@@ -167,11 +168,6 @@ span {
   border: 1px solid #E4E4E4;
 }
 
-.select__closed {
-  display: none;
-  position: absolute;
-}
-
 .select__current {
   color: #212121;
   font-weight: 600;
@@ -254,6 +250,10 @@ span {
   display: none;
 }
 
+.closed {
+  display: none;
+}
+
 @media (max-width: 1028px) {
   .content__title {
     font-size: 20px;
@@ -261,6 +261,9 @@ span {
 }
 
 @media (max-width: 890px) {
+  .content {
+    height: 376px;
+  }
   .content__title {
     font-size: 18px;
   }
@@ -284,14 +287,18 @@ span {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
-    height: 480px;
+    height: 400px;
     padding: 40px 20px;
-    background: url(../img/reduslim.png) center center no-repeat/50%, url(../img/Ellipse6.png) center center no-repeat/50%, #ffffff;
+    padding-bottom: 0;
+    background: url(../img/reduslim.png) center center no-repeat/40%, url(../img/Ellipse6.png) center center no-repeat/40%, #ffffff;
   }
   .image__title {
     color: #212121;
     margin: 0;
     font-size: 18px;
+  }
+  .image__img {
+    display: none;
   }
   .image__text {
     color: #212121;
@@ -300,12 +307,11 @@ span {
     right: 37px;
     top: 40px;
   }
-  .image__img {
-    display: none;
-  }
   .content {
-    height: 376px;
     margin: 0 auto;
+  }
+  .content__form {
+    margin: 0;
   }
   .content__title {
     display: -webkit-box;
@@ -323,9 +329,6 @@ span {
     max-width: 280px;
     padding: 0;
   }
-  .content__form {
-    margin: 0;
-  }
   .secure {
     display: block;
     opacity: 1;
@@ -341,9 +344,6 @@ span {
             align-items: center;
     padding: 11px 80px;
   }
-  .secure__img {
-    margin: auto 20px;
-  }
   .secure span {
     font-weight: bold;
     font-size: 14px;
@@ -351,10 +351,14 @@ span {
     text-align: center;
     color: #212121;
   }
+  .secure__img {
+    margin: auto 20px;
+  }
 }
 
 @media (max-width: 552px) {
   .image {
+    height: 400px;
     background: url(../img/reduslim.png) center top120px no-repeat/55%, url(../img/Ellipse6.png) center top72px no-repeat/55%, #ffffff;
   }
   .content {
@@ -378,11 +382,21 @@ span {
   .phone__info {
     width: 100%;
   }
+  .input {
+    padding: 16px 10px;
+  }
 }
 
 @media (max-width: 350px) {
   .image {
     height: 330px;
+  }
+}
+
+@media (max-width: 320px) {
+  .image {
+    height: 311px;
+    background: url(../img/reduslim.png) center top120px no-repeat/65%, url(../img/Ellipse6.png) center top72px no-repeat/65%, #ffffff;
   }
 }
 /*# sourceMappingURL=style.css.map */
